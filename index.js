@@ -7,7 +7,8 @@ const app = express();  // to create a web app
 app.set('view engine', 'ejs'); // mandatory line for using ejs
 
 app.use(bodyParser.urlencoded({extended:true})); //mandatory line for using body parser
-const mongoUri = process.env.MONGO-URI;
+const mongoUri = "mongodb+srv://My-to-do-List:"+process.env.PASSWORD+"@my-to-do-list.zpbu9zb.mongodb.net/?retryWrites=true&w=majority";
+
 mongoose.connect(mongoUri,
 	{useNewUrlParser:true}); // to connect mongoose to the database called to-do-list-DB
 
