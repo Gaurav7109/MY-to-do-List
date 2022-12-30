@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My To-Do-List</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav role="navigation">
+  <div id="menuToggle">
+    
+    <input type="checkbox" />
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <ul id="menu">
+      <a href="/"><li>My-To-Do-List</li></a>
+      <a href="/my-lists.html"><li>My Lists</li></a>
+      <a href="/help.html"><li>Help</li></a>
+      <a href="/contact.html"><li>Contact us</li></a>
+    </ul>
+  </div>
+</nav>
+
+	<h1 class="box heading">My To-Do List</h1>
+	<div class="body">
+	<div class="just to cover the task box so as to use the flex box">
+
+	<div class="box" id="heading">
+		<h1><%=kindOfDay%></h1>
+	</div>
+	<div class="box">
+
+		<form action= "/addTask" method="POST">
+
+		<input type="text" name="newTask" placeholder="enter new task" autocomplete="off">
+		<button type="submit" name="add">+</button>
+		<button formaction="/removeTask" type="submit" name="remove"> Remove the completed task </button>
+
+		<%for(var i = 0; i != nTask.length;i++){%>
+
+		<div class="item">
+			<input type="checkbox" name="check" value="<%= nTask[i].name %>" /> 
+			<p><%= nTask[i].name %></p>
+
+		</div>
+
+		<%}%>
+
+	</form>
+
+	</div>
+	</div>
+
+	<div class="just to cover the complete task box, so as to use the flex box">
+	<div class="box" id="heading2">
+			<h1> Completed task </h1>
+	</div>
+	<div class="box">
+	<%for(var i = 0; i != complete.length; i++){%>
+
+	<div class="item">
+      	<p><%= complete[i] %> </p>
+  </div>
+	<%}%>
+</div>
+</div>
+</div>
+<footer class="foot">
+<span>
+	&#169 <%=thisYear%> Gaurav1211. All right reserved.
+</span>	</footer>
+</body>
+
+
+</html>

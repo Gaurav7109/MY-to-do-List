@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Lists</title>
+
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<nav role="navigation">
+  <div id="menuToggle">
+    
+    <input type="checkbox" />
+    
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <ul id="menu">
+      <a href="/"><li>My-To-Do-List</li></a>
+      <a href="/my-lists.html"><li>My Lists</li></a>
+      <a href="/help.html"><li>Help</li></a>
+      <a href="/contact.html"><li>Contact us</li></a>
+    </ul>
+  </div>
+</nav>
+
+<h1 class="box heading">My Lists</h1>
+<div class="box">
+
+		<form action= "/addList" method="POST">
+
+		<input type="text" name="newTask" placeholder="Create new list" autocomplete="off">
+		<button type="submit" name="add">+</button>
+		<button formaction="/removeTask" type="submit" name="remove"> Remove the list </button>
+
+	</form>
+	</div>
+	<footer class="foot">
+	<span>
+	&#169  Gaurav1211. All right reserved.
+</span>	</footer>
+</body>
+</html>
